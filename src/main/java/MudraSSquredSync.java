@@ -3,7 +3,7 @@ public class MudraSSquredSync extends DbTable {
     @Override
     Server configureSecondServer() {
 
-        return new MudraServer();
+        return new SSquaredServer();
     }
 
     @Override

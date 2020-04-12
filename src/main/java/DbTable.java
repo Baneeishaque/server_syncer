@@ -1,11 +1,12 @@
 import okhttp3.Request;
 import org.json.JSONException;
-import org.skyscreamer.jsonassert.JSONAssert;
+import org.skyscreamer.jsonassert.JSONCompare;
 import org.skyscreamer.jsonassert.JSONCompareMode;
+import org.skyscreamer.jsonassert.JSONCompareResult;
 
 public abstract class DbTable {
 
-    Server firstserver = configureFirstServer();
+    Server firstServer = configureFirstServer();
     Server secondServer = configureSecondServer();
 
     abstract Server configureSecondServer();
@@ -14,7 +15,7 @@ public abstract class DbTable {
 
     private String performHttpGetOnFirstServer(String methodName) {
 
-        return OkHttpUtils.performHttpGet(new Request.Builder().url(firstserver.constructMethodUrl(methodName)).build());
+        return OkHttpUtils.performHttpGet(new Request.Builder().url(firstServer.constructMethodUrl(methodName)).build());
     }
 
     private String performHttpGetOnSecondServer(String methodName) {
@@ -26,7 +27,14 @@ public abstract class DbTable {
 
         try {
 
-            JSONAssert.assertEquals(performHttpGetOnFirstServer(firstServerMethodName), performHttpGetOnSecondServer(secondServerMethodName), JSONCompareMode.STRICT);
+//            JSONAssert.assertEquals(performHttpGetOnFirstServer(firstServerMethodName), performHttpGetOnSecondServer(secondServerMethodName), JSONCompareMode.STRICT);
+
+            JSONCompareResult jsonCompareResult = JSONCompare.compareJSON(performHttpGetOnFirstServer(firstServerMethodName), performHttpGetOnSecondServer(secondServerMethodName), JSONCompareMode.STRICT);
+
+            if (jsonCompareResult.failed()) {
+
+                System.out.println(jsonCompareResult.getMessage());
+            }
 
         } catch (JSONException e) {
 
