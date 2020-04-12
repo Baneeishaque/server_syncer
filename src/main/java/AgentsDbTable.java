@@ -58,7 +58,7 @@ public class AgentsDbTable extends MudraSSquredSync {
 
                     try {
 
-                        String query = "UPDATE " + tableName + " SET " + fieldName + "=" + fieldComparisonFailure.getExpected() + " WHERE " + identityField + "=" + firstJson.getJSONObject(fieldIndexNumber).getString(identityField);
+                        String query = "UPDATE " + tableName + " SET " + fieldName + "=" + fieldComparisonFailure.getExpected() + " WHERE " + identityField + "=" + firstJson.getJSONObject(fieldIndexNumber).getString(identityField)+";";
                         System.out.println(query);
 
                     } catch (JSONException e) {
