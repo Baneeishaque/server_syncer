@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - ssquareq_wordpress@149.255.58.44" uuid="e06eea27-5ae9-4b49-9f3d-8ec7477b1888">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>ssquareq_root</user-name>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>
