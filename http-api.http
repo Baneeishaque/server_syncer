@@ -1,0 +1,275 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/GetProfitSingleDay.{{file_extension}}?agent=ban&start_date=2019-06-08
+Accept: application/json
+Cache-Control: no-cache
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/GetProfitMultipleDay.{{file_extension}}?agent=srf&start_date=06-06-2019&end_date=09-06-2019
+Accept: application/json
+Cache-Control: no-cache
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/GetLoadTicketRate.{{file_extension}}
+Accept: application/json
+Cache-Control: no-cache
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{admin_section_name}}/UpdateLoadTicketRate.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+lsk_rate=10.2&box_rate=12.2&ab_rate=9.2&a_rate=8.2&inserter_app=admin_full&inserter_user=srf
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/GetAgentKuttaLimitStatus.{{file_extension}}?serial=555&entry_count=9&agent=ban
+Accept: text/plain
+Cache-Control: no-cache
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{admin_section_name}}/GetKuttaAgentLimits.{{file_extension}}?agent=srf
+Accept: text/plain
+Cache-Control: no-cache
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{admin_section_name}}/SetKuttaAgentLimits.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+agent=ban&ticket_limit=15
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/GetLoadPayment.{{file_extension}}?start_date=2019-10-06&end_date=2019-10-06&agent=srf
+Accept: application/json
+Cache-Control: no-cache
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/GetLoadSale.{{file_extension}}?start_date=2019-10-06&end_date=2019-10-06&agent=srf
+Accept: application/json
+Cache-Control: no-cache
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/GetLoadSale.{{file_extension}}?start_date=2019-11-12&end_date=2019-11-12&agent=ban
+Accept: application/json
+Cache-Control: no-cache
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/GetLoadSale.{{file_extension}}?start_date=2019-11-11&end_date=2019-11-11&agent=ban
+Accept: application/json
+Cache-Control: no-cache
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/GetLoadSale.{{file_extension}}?start_date=2019-11-11&end_date=2019-11-12&agent=ban
+Accept: application/json
+Cache-Control: no-cache
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/get_agent_login_patch.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+username=ban&password=v&flavour=pos_lite
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/{{pos_plus_section_name}}/UpdateSubAgentRate.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+agent=srf&abc=11.5&ab=9.5&a=8.5
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/get_agent_login_patch.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+username=ban&password=v&flavour=pos_lite
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/get_sale_scheme_serial_count.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+date=2019-11-30&scheme=a
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/get_sale_scheme_serial_count_patch.{{file_extension}}?date=2019-11-30&scheme=a
+Accept: application/json
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/get_sale_scheme_serial_count_patch2.{{file_extension}}?date=2019-11-30&scheme=a
+Accept: application/json
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/add_agent.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+username=vsn&name=vishnu&address=vishnu cherumukk&password=123&a=9&ab=10&abc=12&agent_money_lsk1=400&agent_money_lsk2=50&agent_money_lsk3=20&agent_money_lsk4=20&agent_money_lsk5=20&agent_money_lsk6=0&agent_money_box1=300&agent_money_box2=30&agent_money_ab=30&agent_money_a=0
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/{{pos_plus_section_name}}/add_agent_sub.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+username=vsn2&name=vishnu2&agent=vsn&address=vishnu cherumukk2&password=123&a=9&ab=10&abc=12&agent_money_lsk1=400&agent_money_lsk2=50&agent_money_lsk3=20&agent_money_lsk4=20&agent_money_lsk5=20&agent_money_lsk6=0&agent_money_box1=300&agent_money_box2=30&agent_money_ab=30&agent_money_a=0
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{admin_section_name}}/GetKuttaAgentLimitsPatch.{{file_extension}}?agent=srf
+Accept: application/json
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{admin_section_name}}/GetKuttaAgentLimitsPatch.{{file_extension}}?agent=srf5
+Accept: application/json
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/get_payment.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+agent=mmu&start_date=2019-12-07&end_date=2019-12-07
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/get_payment.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+agent=mmu&start_date=2019-12-07&end_date=2019-12-08
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/GetAgentKuttaLimitStatusPatch.{{file_extension}}?serial=666&scheme=lsk&entry_count=21&agent=ban
+Accept: text/plain
+Cache-Control: no-cache
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/GetAgentTicketLimitStatus.{{file_extension}}?serial=666&scheme=lsk&entry_count=21&agent=ban
+Accept: text/plain
+Cache-Control: no-cache
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{admin_section_name}}/SetAgentTicketLimits.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+agent=ban&lsk_limit=10&box_limit=10&ab_limit=10&bc_limit=10&ac_limit=10&a_limit=10&b_limit=10&c_limit=10
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{admin_section_name}}/GetAgentTicketLimits.{{file_extension}}?agent=ban
+Accept: text/plain
+Cache-Control: no-cache
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/GetCombinedTicketLimitStatus.{{file_extension}}?serial=658&scheme=lsk&entry_count=2&agent=ban
+Accept: text/plain
+Cache-Control: no-cache
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/GetCombinedKuttaLimitStatusPatch.{{file_extension}}?serial=666&scheme=lsk&entry_count=21&agent=ban
+Accept: text/plain
+Cache-Control: no-cache
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/GetCombinedLoadTicketLimitStatus.{{file_extension}}?serial=658&scheme=lsk&entry_count=2&agent=ban
+Accept: text/plain
+Cache-Control: no-cache
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/get_version_pos_plus_patch.{{file_extension}}
+Accept: text/plain
+Cache-Control: no-cache
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/{{main_section_name}}/get_payment_main_patch.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+start_date=2020-02-04&end_date=2020-02-04&agent=ssa
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/{{main_section_name}}/get_payment_main_patch.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+start_date=2020-02-03&end_date=2020-02-04&agent=ssa
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{admin_section_name}}/{{sub_admin_section_name}}/get_sub_admin_collections.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+start_date=2020-02-15&end_date=2020-02-15&collector=bibin
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{admin_section_name}}/{{sub_admin_section_name}}/get_sub_admin_collections.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+start_date=2020-02-14&end_date=2020-02-15&collector=bibin
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{admin_section_name}}/{{sub_admin_section_name}}/get_sub_admin_collections.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+start_date=2020-02-14&end_date=2020-02-14&collector=bibin
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/{{main_section_name}}/get_payment_main_patch2.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+start_date=2020-03-17&end_date=2020-03-17&agent=ssu
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/{{main_section_name}}/get_payment_main_patch2.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+start_date=2020-03-16&end_date=2020-03-17&agent=ssu
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/add_agent_patch.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+username=vsn4&name=vishnu&address=vishnu cherumukk&password=123&a=9&ab=10&abc=12&agent_money_lsk1=400&agent_money_lsk2=50&agent_money_lsk3=20&agent_money_lsk4=20&agent_money_lsk5=20&agent_money_lsk6=0&agent_money_box1=300&agent_money_box2=30&agent_money_ab=30&agent_money_a=0
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/{{pos_plus_section_name}}/add_agent_sub_patch.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+username=vsn5&name=vishnu2&agent=vsn&address=vishnu cherumukk2&password=123&a=9&ab=10&abc=12&agent_money_lsk1=400&agent_money_lsk2=50&agent_money_lsk3=20&agent_money_lsk4=20&agent_money_lsk5=20&agent_money_lsk6=0&agent_money_box1=300&agent_money_box2=30&agent_money_ab=30&agent_money_a=0
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/{{reseller_section_name}}/getResellerLogin.{{file_extension}}?username=briju&password=briju
+Accept: text/plain
+Cache-Control: no-cache
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/{{reseller_section_name}}/getResellerLogin.{{file_extension}}?username=briju2&password=briju
+Accept: text/plain
+Cache-Control: no-cache
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/get_admin_login.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+username=aass2&password=456
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/get_version.{{file_extension}}
+Accept: application/json
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/get_version_pos_old.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+flavour=master
+
+###
+POST http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{pos_section_name}}/get_version_pos_old.{{file_extension}}
+Content-Type: application/x-www-form-urlencoded
+
+flavour=pos
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{sub_admin_section_name}}/get_version_admin_sub.{{file_extension}}
+Accept: application/json
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/{{admin_section_name}}/get_status.{{file_extension}}
+Accept: application/json
+
+###
+GET http://{{host}}/{{application_folder}}/{{http_API_folder}}/get_agents.{{file_extension}}
+Accept: application/json
+
+###
