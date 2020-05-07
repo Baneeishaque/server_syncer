@@ -70,6 +70,10 @@ public abstract class DbTable {
 
                 generateSyncQueries.generate(fieldComparisonFailures, firstJson);
             }
+            else{
+//                System.out.println("firstServerMethodName = " + firstServerMethodName + ", secondServerMethodName = " + secondServerMethodName + ", isResponseIncludesStatus = " + isResponseIncludesStatus + ", identityField = " + identityField + ", generateSyncQueries = " + generateSyncQueries + ", isDebugEnabled = " + isDebugEnabled);
+                System.out.println("JSON Outputs are same...");
+            }
 
         } catch (JSONException e) {
 
